@@ -3,6 +3,7 @@ import unittest
 from my_sum import sum
 from fractions import Fraction
 from my_sum import blanckSpaces
+from my_sum import isAnEmail
 
 class TestSum(unittest.TestCase):
 
@@ -39,6 +40,14 @@ class TestSum(unittest.TestCase):
         data = "Today is Monday"
         result4 = blanckSpaces(data)
         self.assertLess(result4, 10)
+
+    def test_Check_Possible_email(self):
+        """
+        This will check if the string sended its posses an @.
+        """
+        data4 = "kenuhel@gmail.com"
+        result = isAnEmail(data4)
+        self.assertTrue(result, True)
 
 if __name__ == "__main__":
     unittest.main()

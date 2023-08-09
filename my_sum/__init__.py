@@ -6,13 +6,18 @@ def sum(arg):
 
 
 def blanckSpaces(arg):
-    countB =0
+    countB = 0
     for count in arg:
         if count == " ":
             countB +=1
     return countB
 
-
+def isAnEmail(arg):
+    email = False
+    for p in arg:
+        if p == "@":
+            email = True
+    return email
     
 
 
